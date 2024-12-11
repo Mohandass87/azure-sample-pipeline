@@ -15,9 +15,9 @@ stages:
 
 - stage: Deploy
   displayName: 'Deploy stage'
-  depensOn: Build
+  dependsOn: Build
   jobs:
-  - jobs: DeployJob
+  - job: DeployJob
     displayName: 'Run Deploy Script'
     steps:
     - script: echo "Deploying"
